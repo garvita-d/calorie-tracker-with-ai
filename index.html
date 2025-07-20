@@ -415,51 +415,51 @@
     <!-- Dietary Preference Modal -->
     <div id="dietModal" class="diet-preference-modal">
         <div class="diet-modal-content">
-            <h2>🍽️ Choose Your Dietary Preference</h2>
+            <h2> Choose Your Dietary Preference</h2>
             <p style="margin-bottom: 30px; color: #666;">This helps us provide better food recommendations and accurate calorie analysis</p>
             <button class="diet-option" onclick="setDietPreference('vegetarian')">
-                🌱 Vegetarian
+                  Vegetarian
             </button>
             <button class="diet-option" onclick="setDietPreference('non-vegetarian')">
-                🍖 Non-Vegetarian
+                 Non-Vegetarian
             </button>
         </div>
     </div>
 
     <div class="container">
         <div class="header">
-            <h1>🤖 Enhanced AI Calorie Tracker</h1>
+            <h1> Enhanced AI Calorie Tracker</h1>
             <p>AI-powered food recognition with accurate calorie counting</p>
-            <div class="ai-badge">✨ Powered by AI & Google</div>
+            <div class="ai-badge"> Powered by AI & Google</div>
             <div id="dietIndicator" class="diet-indicator" style="display: none;">
                 <span id="dietType"></span>
             </div>
         </div>
 
         <div class="voice-section">
-            <h3>🗣️ Voice Input</h3>
-            <button id="voiceBtn" class="voice-btn">🎙️ Start Voice Recognition</button>
-            <button id="stopBtn" class="voice-btn" style="display: none;">⏹️ Stop Listening</button>
+            <h3> Voice Input</h3>
+            <button id="voiceBtn" class="voice-btn"> Start Voice Recognition</button>
+            <button id="stopBtn" class="voice-btn" style="display: none;"> Stop Listening</button>
             <div id="voiceStatus" class="status">Click to start speaking</div>
             <div id="voiceResult" style="margin-top: 15px; font-style: italic;"></div>
         </div>
 
         <div class="input-section">
-            <h3>✏️ Manual Input (Alternative)</h3>
+            <h3>Manual Input (Alternative)</h3>
             <div class="input-group">
                 <input type="text" id="foodInput" placeholder="Describe any food in any way (e.g., 'had pizza for lunch', 'ate mom's homemade biryani')">
                 <button class="btn" id="analyzeBtn" onclick="processFoodInput()">
                     <span id="btnText">Analyze Food</span>
                 </button>
                 <button class="btn rephrase-btn" id="rephraseBtn" onclick="rephraseInput()">
-                    🔄 Rephrase
+                     Rephrase
                 </button>
             </div>
             <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
                 Examples: "Two slices of pizza", "Mom's chicken curry with rice", "Starbucks latte and muffin"
             </p>
             <div id="rephraseArea" class="rephrase-area" style="display: none;">
-                <h4>🔄 AI Rephrased Suggestions:</h4>
+                <h4> AI Rephrased Suggestions:</h4>
                 <div id="rephrasedOptions"></div>
             </div>
         </div>
@@ -485,14 +485,14 @@
         </div>
 
         <div class="recommendations">
-            <h3>💡 AI-Powered Recommendations</h3>
+            <h3> AI-Powered Recommendations</h3>
             <div id="recommendationsArea">
                 <p>Add some food items to get personalized AI recommendations based on your dietary preference!</p>
             </div>
         </div>
 
         <div class="meal-log">
-            <h3>📝 Today's Meals</h3>
+            <h3> Today's Meals</h3>
             <div id="mealLog">
                 <p style="color: #666;">No meals logged today. Start by describing any food you've eaten!</p>
             </div>
@@ -516,10 +516,10 @@
             document.getElementById('dietModal').style.display = 'none';
             document.getElementById('dietIndicator').style.display = 'inline-block';
             document.getElementById('dietType').textContent = 
-                preference === 'vegetarian' ? '🌱 Vegetarian' : '🍖 Non-Vegetarian';
+                preference === 'vegetarian' ? ' Vegetarian' : ' Non-Vegetarian';
             
             updateRecommendations();
-            showMessage(`✅ Dietary preference set to ${preference}. Recommendations updated!`, 'success');
+            showMessage(`Dietary preference set to ${preference}. Recommendations updated!`, 'success');
         }
 
         // Initialize Speech Recognition
@@ -534,7 +534,7 @@
                 
                 recognition.onstart = function() {
                     isListening = true;
-                    updateVoiceStatus('🎤 Listening... Speak now!', 'listening');
+                    updateVoiceStatus(' Listening... Speak now!', 'listening');
                     document.getElementById('voiceBtn').style.display = 'none';
                     document.getElementById('stopBtn').style.display = 'inline-block';
                 };
@@ -556,19 +556,19 @@
                 
                 recognition.onerror = function(event) {
                     console.error('Speech recognition error:', event.error);
-                    updateVoiceStatus('❌ Error: ' + event.error, 'error');
+                    updateVoiceStatus('Error: ' + event.error, 'error');
                     resetVoiceButtons();
                 };
                 
                 recognition.onend = function() {
                     isListening = false;
-                    updateVoiceStatus('✅ Voice recognition stopped', 'success');
+                    updateVoiceStatus('Voice recognition stopped', 'success');
                     resetVoiceButtons();
                 };
                 
                 return true;
             } else {
-                updateVoiceStatus('❌ Voice recognition not supported in this browser', 'error');
+                updateVoiceStatus(' Voice recognition not supported in this browser', 'error');
                 return false;
             }
         }
@@ -590,7 +590,7 @@
                     recognition.start();
                 } catch (error) {
                     console.error('Error starting recognition:', error);
-                    updateVoiceStatus('❌ Failed to start voice recognition', 'error');
+                    updateVoiceStatus(' Failed to start voice recognition', 'error');
                 }
             }
         }
@@ -742,7 +742,7 @@
             return {
                 foods: foods,
                 totalCalories: totalCalories,
-                analysis: `🤖 AI analysis complete using advanced food recognition. Identified ${foods.length} food item(s) with ${dietPreference} dietary preferences considered.${dietaryNote}`
+                analysis: `AI analysis complete using advanced food recognition. Identified ${foods.length} food item(s) with ${dietPreference} dietary preferences considered.${dietaryNote}`
             };
         }
 
@@ -897,7 +897,7 @@
                     updateRecommendations();
                     
                     // Show success message with analysis
-                    showMessage(`✅ Analysis complete! Added ${result.totalCalories} calories to your daily intake.`, 'success');
+                    showMessage(`Analysis complete! Added ${result.totalCalories} calories to your daily intake.`, 'success');
                     
                     // Show AI analysis
                     showMessage(result.analysis, 'info');
@@ -908,12 +908,12 @@
                     }
                     
                 } else {
-                    showMessage('❌ Could not analyze the food. Please try describing it differently.', 'error');
+                    showMessage(' Could not analyze the food. Please try describing it differently.', 'error');
                 }
                 
             } catch (error) {
                 console.error('Error analyzing food:', error);
-                showMessage('❌ Error analyzing food. Please try again.', 'error');
+                showMessage(' Error analyzing food. Please try again.', 'error');
             } finally {
                 isProcessing = false;
                 analyzeBtn.disabled = false;
