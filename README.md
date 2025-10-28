@@ -12,37 +12,13 @@ An intelligent calorie tracking application with voice recognition, AI-powered f
 - 🔄 **AI Rephrasing**: Get alternative ways to describe your food
 - 📱 **Responsive Design**: Works on desktop and mobile
 
-## 🚀How did I do the Deployment to Netlify
-
-### Using GitHub
-
-1. **Create the project structure**:
+1. **Project structure**:
 ```
 voice-calorie-tracker/
 ├── index.html
 ├── styles.css
 ├── app.js
 └── README.md
-```
-
-2. **Initialize Git repository**:
-```bash
-git init
-git add .
-git commit -m "Initial commit: AI Voice Calorie Tracker"
-```
-
-3. **Create a GitHub repository**:
-   - Go to [GitHub](https://github.com)
-   - Click "New Repository"
-   - Name it `voice-calorie-tracker`
-   - Don't initialize with README (you already have one)
-
-4. **Push to GitHub**:
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/voice-calorie-tracker.git
-git branch -M main
-git push -u origin main
 ```
 
 ## 🔧 Configuration
