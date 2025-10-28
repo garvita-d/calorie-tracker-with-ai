@@ -45,14 +45,6 @@ git branch -M main
 git push -u origin main
 ```
 
-5. **Deploy on Netlify**:
-   - Go to [Netlify](https://netlify.com)
-   - Click "Add new site" → "Import an existing project"
-   - Choose "GitHub"
-   - Select your `voice-calorie-tracker` repository
-   - Click "Deploy site"
-
-
 ## 🔧 Configuration
 
 ### Customizing Daily Calorie Target
