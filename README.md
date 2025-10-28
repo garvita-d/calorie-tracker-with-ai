@@ -94,4 +94,4 @@ For issues or questions, create an issue on GitHub.
 
 ---
 
-Made with ❤️ and AI
+Made by Garvita Dalmia
