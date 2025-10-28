@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced AI-Powered Voice Calorie Tracker</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Dietary Preference Modal -->
@@ -18,6 +18,33 @@
             <button class="diet-option" onclick="setDietPreference('non-vegetarian')">
                 🍗 Non-Vegetarian
             </button>
+        </div>
+    </div>
+
+    <!-- Fallback Recording Modal (used when SpeechRecognition is not available) -->
+    <div id="recordModal" class="diet-preference-modal" style="display:none;">
+        <div class="diet-modal-content" style="max-width:600px;">
+            <h2>🎧 Record Audio (Fallback)</h2>
+            <p style="margin-bottom:10px; color:#666;">
+                Your browser doesn't support live speech recognition. You can record audio here, play it back, download it, or type/paste a transcript below.
+            </p>
+
+            <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
+                <button id="recordStartBtn" class="diet-option" style="min-width:120px;">⏺️ Start</button>
+                <button id="recordStopBtn" class="diet-option" style="min-width:120px; display:none;">⏹️ Stop</button>
+                <button id="recordCloseBtn" class="diet-option" style="min-width:120px; background: #bbb;">Close</button>
+            </div>
+
+            <div id="recordControls" style="text-align:center; margin-bottom:10px;">
+                <audio id="recordPlayback" controls style="width:100%; display:none;"></audio>
+                <a id="downloadLink" style="display:none; margin-top:8px; display:block;"></a>
+            </div>
+
+            <textarea id="manualTranscript" rows="4" placeholder="Or type/paste transcript here..." style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd;"></textarea>
+
+            <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:12px;">
+                <button id="useTranscriptBtn" class="diet-option" style="background:linear-gradient(135deg,#667eea,#764ba2); min-width:140px;">Use Transcript</button>
+            </div>
         </div>
     </div>
 
@@ -94,6 +121,6 @@
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
