@@ -2,23 +2,34 @@
 
 An intelligent calorie tracking application with voice recognition, AI-powered food analysis, and personalized dietary recommendations.
 
+**🌐 Live Demo:** [https://inspiring-cranachan-6554f6.netlify.app](https://inspiring-cranachan-6554f6.netlify.app)
+
 ## ✨ Features
 
-- 🎤 **Voice Recognition**: Speak your meals naturally
+- 🎤 **Voice Recognition**: Speak your meals naturally with Web Speech API
 - 🤖 **AI Food Analysis**: Comprehensive food database with smart calorie estimation
-- 🥗 **Dietary Preferences**: Vegetarian and Non-Vegetarian options
-- 📊 **Daily Statistics**: Track calories consumed vs. target
-- 💡 **Smart Recommendations**: Personalized food suggestions
+- 🥗 **Dietary Preferences**: Vegetarian and Non-Vegetarian options with tailored recommendations
+- 📊 **Daily Statistics**: Real-time tracking of calories consumed vs. target
+- 💡 **Smart Recommendations**: Personalized food suggestions based on dietary preference
 - 🔄 **AI Rephrasing**: Get alternative ways to describe your food
-- 📱 **Responsive Design**: Works on desktop and mobile
+- 📱 **Responsive Design**: Fully responsive interface works on desktop and mobile
+- 🎙️ **Fallback Recording**: Manual audio recording option for browsers without live speech recognition
 
-1. **Project structure**:
+## 🚀 Technologies Used
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **APIs**: Web Speech API, MediaRecorder API
+- **Deployment**: Netlify
+- **Design**: Gradient UI with modern responsive layout
+
+## 📁 Project Structure
+
 ```
 voice-calorie-tracker/
-├── index.html
-├── styles.css
-├── app.js
-└── README.md
+├── index.html          # Main HTML structure
+├── style.css           # Styling and responsive design
+├── app.js             # Core application logic and AI analysis
+└── README.md          # Project documentation
 ```
 
 ## 🔧 Configuration
@@ -46,39 +57,40 @@ In `app.js`, add to `comprehensiveFoodDB` object:
 
 ## 🎨 Customizing Styles
 
-All styling is in `styles.css`. Key sections:
+All styling is in `style.css`. Key sections:
 - **Colors**: Gradient backgrounds and theme colors
 - **Layouts**: Grid systems for stats and recommendations
-- **Animations**: Pulse effects and transitions
+- **Animations**: Pulse effects and smooth transitions
 - **Responsive**: Mobile breakpoints at 768px
 
 ## 🌐 Browser Support
 
-- ✅ Chrome (recommended for voice recognition)
-- ✅ Edge
-- ✅ Safari (limited voice support)
-- ✅ Firefox (limited voice support)
+- ✅ Chrome (recommended for best voice recognition)
+- ✅ Edge (full voice recognition support)
+- ⚠️ Safari (limited voice support, fallback recording available)
+- ⚠️ Firefox (limited voice support, fallback recording available)
 
 ## 📝 Usage
 
-1. **Set Dietary Preference**: Choose Vegetarian or Non-Vegetarian
-2. **Voice Input**: Click "Start Voice Recognition" and speak your meal
-3. **Manual Input**: Type food description and click "Analyze"
-4. **Rephrase**: Use AI to rephrase your food description
-5. **Track Progress**: View daily stats and meal log
-6. **Get Recommendations**: See personalized food suggestions
+1. **Set Dietary Preference**: Choose Vegetarian or Non-Vegetarian on first launch
+2. **Voice Input**: Click "Start Voice Recognition" and speak your meal description
+3. **Manual Input**: Type food description in the text field and click "Analyze"
+4. **Rephrase**: Use AI to generate alternative descriptions of your food
+5. **Track Progress**: View real-time daily stats and complete meal log
+6. **Get Recommendations**: Receive personalized food suggestions based on remaining calories
 
 ## 🐛 Troubleshooting
 
 ### Voice Recognition Not Working
-- Use Chrome or Edge browser
-- Allow microphone permissions
-- Check if microphone is connected
+- Use Chrome or Edge browser for best results
+- Allow microphone permissions when prompted
+- Check if microphone is properly connected
+- Try the fallback recording option if live recognition fails
 
 ### Food Not Recognized
-- Try rephrasing your description
-- Include quantities (e.g., "2 slices of pizza")
-- Use common food names
+- Try rephrasing your description using the AI rephrase feature
+- Include quantities (e.g., "2 slices of pizza", "1 bowl of rice")
+- Use common food names from the comprehensive database
 
 ## 📄 License
 
@@ -90,8 +102,9 @@ Feel free to fork, modify, and submit pull requests!
 
 ## 📧 Support
 
-For issues or questions, create an issue on GitHub.
+For issues or questions, create an issue on GitHub or visit the [live demo](https://inspiring-cranachan-6554f6.netlify.app).
 
 ---
 
-Made by Garvita Dalmia
+**Developed by Garvita Dalmia**  
+🔗 [Live Application](https://inspiring-cranachan-6554f6.netlify.app)
